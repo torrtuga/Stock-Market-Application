@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/selected_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/technology" />
+
+    <TextView
+        android:id="@+id/selected_item_title"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/selected_item_image"
+        android:layout_toRightOf="@+id/selected_item_image"
+        android:ellipsize="end"
+        android:lines="3"
+        android:maxLines="3"
+        android:singleLine="false"
+        android:text="List Items"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="refreshButton"
+        android:src="@drawable/refersh" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@id/refresh"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@id/refresh"
+        android:layout_below="@id/refresh"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/selected_item_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/selected_item_image"
+            android:layout_toRightOf="@+id/selected_item_image"
+            android:singleLine="false"
+            android:text="Sample"
+            android:textColor="@color/text" />
+    </ScrollView>
+</RelativeLayout>
